@@ -1,0 +1,11 @@
+{
+  "name": "mahadev-photography",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site + Vercel serverless (Razorpay + Invoice PDF + Email)",
+  "dependencies": {
+    "razorpay": "^2.9.4",
+    "nodemailer": "^6.9.8",
+    "pdf-lib": "^1.17.1"
+  }
+}

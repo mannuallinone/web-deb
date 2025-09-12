@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Booking – Mahadev Photography</title>
+<link rel="stylesheet" href="css/booking.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+  <div class="brand"><img src="assets/images/logo.png" alt="Logo" /><a href="index.html">Mahadev Photography</a></div>
+  <div class="links"><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+</div></nav>
+
+<section class="section container">
+  <!-- Our Packages Section -->
+<section id="packages">
+  <h2>Our Packages</h2>
+  <div class="packages-container">
+    <div class="package-card">
+      <h3>Basic Package</h3>
+      <li>traditional video + Photo</li>
+      <li>1 pendrvie(mix video+photo)</li>
+      <p class="price">₹15,000</p>
+    </div>
+    <div class="package-card">
+      <h3>Advance Package </h3>
+      <li>1 day Drone shoot</li>
+       <li>traditional video + Photo</li>
+      <li>1 pendrvie(mix video+photo)</li>
+      <p class="price">₹20,000</p>
+    </div>
+    <div class="package-card">
+      <h3>Premium</h3>
+    <li>Drone shoot</li>
+    <li>Cinamatic shoot</li>
+    <li>30 sheet Album</li>
+       <li>traditional video + Photo</li>
+      <li>1 pendrvie(mix video+photo)</li>
+      <p class="price">₹30,000</p>
+    </div>
+  </div>
+</section>
+  <h2>Book Your Dates</h2>
+  <form id="bookingForm" class="form">
+    <div class="grid grid-2">
+      <input required id="name" placeholder="Your Name">
+      <input required type="tel" id="phone" placeholder="Phone">
+      <input required type="email" id="email" placeholder="Email">
+      <input required type="text" id="address" placeholder="Event Address">
+    </div>
+    <div id="datesContainer" class="card">
+      <strong>Event Dates & Functions</strong>
+      <div class="grid grid-2 mt">
+        <input type="date" class="eventDate" required>
+        <input type="text" class="eventName" placeholder="Event (e.g. Haldi)" required>
+      </div>
+    </div>
+    <button type="button" id="addDate" class="btn ghost">+ Add another date</button>
+    <div class="grid grid-3 mt">
+      <select id="package" required>
+        <option value="">Select Package</option>
+        <option value="15000">Basic (₹15,000)</option>
+        <option value="20000">Advance (₹20,000)</option>
+        <option value="30000">Premium (₹30,000)</option>
+         <option value="50">test (₹50)</option>
+      </select>
+      <select id="advance" required>
+        <option value="">Advance %</option><option value="20">20%</option><option value="30">30%</option>
+        <option value="40">40%</option><option value="50">50%</option>
+      </select>
+      <input id="total" readonly placeholder="Total (auto)">
+    </div>
+    <button type="submit" class="btn primary mt">Submit & Continue to Payment</button>
+    <div id="msg" class="muted mt"></div>
+  </form>
+</section>
+<footer class="footer"><div class="container">© <span id="yr"></span> Mahadev Photography</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<script src="js/booking.js"></script>
+</body></html>
