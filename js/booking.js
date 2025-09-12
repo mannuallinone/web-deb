@@ -1,8 +1,4 @@
-let RAZORPAY_KEY_ID = null;
 
-// Fetch public key
-async function getPublicKey() {
-  try {
     const r = await fetch('/api/public-key');
     const j = await r.json();
     RAZORPAY_KEY_ID = j.key || null;
